@@ -1,2 +1,7 @@
 lib
 webroot/web
+bin
+gcdata
+files
+.idea
+.vscode
