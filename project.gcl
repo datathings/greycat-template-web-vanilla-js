@@ -1,5 +1,20 @@
 @library("std", "7.0.1363-dev");
 @library("web", "7.0.271-dev");
+@library("explorer", "7.0.22-dev");
+
+var names: nodeIndex<String, nodeList<String>>;
+
+fn main(){
+    if(names.size()==0){
+        for(var i=0;i<100;i++){
+            var sub = nodeList<String>{};
+            for(var j=0;j<100;j++){
+                sub.add("sub_${i}_${j}");
+            }
+            names.set("dmain_${i}", sub);
+        }
+    }
+}
 
 @volatile
 type Filters {
