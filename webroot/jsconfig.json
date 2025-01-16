@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "ES2024",
+      "module": "ESNext",
+      "moduleResolution": "bundler",
+      "strict": true,
+      "checkJs": true,
+      "lib": ["DOM", "ES2024"],
+      "types": []
+    },
+    "include": ["webroot", "lib", "*.d.ts"],
+    "exclude": ["webroot/web"]
+  }
