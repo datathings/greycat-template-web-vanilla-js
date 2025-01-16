@@ -11,11 +11,7 @@ results_el.value = await gc.fake_table(filters);
 // @ts-ignore
 results_el.addEventListener('gui-click', async function(/** @type{any} */ev){
     // @ts-ignore
-    var line =  (results_el.value)[ev.detail.rowIdx];
-    var obj_el = document.createElement('gui-object');
-    obj_el.value = line;
-    obj_el.header = true;
-    details_el.replaceChildren(obj_el);
+    document.getElementById("detail").value =  (results_el.value)[ev.detail.rowIdx];
     details_el.show();
 });
 export {};
