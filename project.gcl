@@ -11,7 +11,7 @@ fn main(){
             for(var j=0;j<100;j++){
                 sub.add("sub_${i}_${j}");
             }
-            names.set("dmain_${i}", sub);
+            names.set("main_${i}", sub);
         }
     }
 }
@@ -20,15 +20,36 @@ fn main(){
 type Filters {
     min: int;
     max: int;
-    prefix: String;
+    main: String;
+    sub: String;
 }
 
 @volatile
 type TableLine {
     a: int;
     b: int;
-    c: int;
+    c: String;
     d: String;
+}
+
+@expose
+fn get_all_names(): Array<String>{
+    var res = Array<String>{};
+    for(k,_ in names){
+       res.add(k); 
+    }
+    return res;
+}
+
+@expose
+fn get_sub_names_by_name(name: String?): Array<String>{
+    var res = Array<String>{};
+    if(name != null){
+        for(_, v in names.get(name)?){
+            res.add(v);
+        }
+    }
+    return res;
 }
 
 @expose
@@ -40,8 +61,8 @@ fn fake_table(f: Filters) : Array<TableLine> {
             TableLine{
                 a: r.uniform(f.min,f.max),
                 b: r.uniform(f.min,f.max),
-                c: r.uniform(f.min,f.max),
-                d: "${f.prefix}_${r.uniform(f.min,f.max)}" 
+                c: "${f.main}_${r.uniform(f.min,f.max)}",
+                d: "${f.sub}_${r.uniform(f.min,f.max)}" 
             });
     }
     return res;
