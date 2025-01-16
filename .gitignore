@@ -1,5 +1,6 @@
 lib
 webroot/web
+webroot/explorer
 bin
 gcdata
 files
