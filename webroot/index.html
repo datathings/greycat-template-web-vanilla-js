@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="web/greycat.css">
 </head>
 <body style="height: 100%;">
-    <sl-split-panel position="10" style="height: 100%;">
-        <gui-object id="menu" slot="start"></gui-object>
-        <sl-split-panel vertical position="15" slot="end">
-            <gui-card slot="start">
-                <header slot="header">Filters</header>
-                <gui-input-object id="filters"></gui-input-object>
-            </gui-card>
-            <gui-table id="results" slot="end"></gui-table>
-        </sl-split-panel>
+    <sl-split-panel vertical position="28">
+        <gui-card slot="start">
+            <header slot="header">Filters</header>
+            <gui-input-object id="filters"></gui-input-object>
+        </gui-card>
+        <gui-table id="results" slot="end"></gui-table>
     </sl-split-panel>
     <sl-drawer id="details">
         <gui-object header id="detail"></gui-object>
