@@ -1,6 +1,6 @@
-@library("std", "7.0.1370-dev");
-@library("web", "7.0.271-dev");
-@library("explorer", "7.0.22-dev");
+@library("std", "7.0.1389-dev");
+@library("web", "7.0.287-dev");
+@library("explorer", "7.0.25-dev");
 
 var names: nodeIndex<String, nodeList<String>>;
 
