@@ -1,5 +1,5 @@
-@library("std", "7.0.1389-dev");
-@library("web", "7.0.287-dev");
+@library("std", "7.0.1394-dev");
+@library("web", "7.0.296-dev");
 @library("explorer", "7.0.25-dev");
 
 var names: nodeIndex<String, nodeList<String>>;
@@ -22,6 +22,9 @@ type Filters {
     max: int;
     main: String;
     sub: String;
+    //date: Date;
+    t2: time;
+    timezone: TimeZone;
 }
 
 @volatile
@@ -62,7 +65,7 @@ fn fake_table(f: Filters) : Array<TableLine> {
                 a: r.uniform(f.min,f.max),
                 b: r.uniform(f.min,f.max),
                 c: "${f.main}_${r.uniform(f.min,f.max)}",
-                d: "${f.sub}_${r.uniform(f.min,f.max)}" 
+                d: "${f.sub}_${r.uniform(f.min,f.max)}_${f.timezone}" 
             });
     }
     return res;
