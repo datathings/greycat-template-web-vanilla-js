@@ -25,7 +25,7 @@ const filters = new gc.Filters(
 filters_el.value = filters;
 filters_el.inline = true;
 filters_el.noTypes = true;
-let filters_update = async function (/** @type{any} */ ev) {
+async function filters_update () {
   const main_el = /** @type {gc.GuiSelect<String>}*/ (filters_el.fields.main);
   const sub_el = /** @type {gc.GuiSelect<String>}*/ (filters_el.fields.sub);
   main_el.options = (await gc.get_all_names())

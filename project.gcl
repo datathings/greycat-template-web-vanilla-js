@@ -1,4 +1,4 @@
-@library("std", "7.0.1665-testing");
+@library("std", "7.0.1680-testing");
 @library("web", "7.0.11-testing");
 @library("explorer", "7.0.4-testing");
 
