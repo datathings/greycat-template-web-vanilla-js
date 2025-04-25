@@ -1,4 +1,4 @@
-# js
+# web-vanilla-js
 
 ## Install
 Make sure you've updated the versions at the top of `project.gcl` and then:
